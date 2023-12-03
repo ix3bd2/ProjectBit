@@ -2,10 +2,11 @@ import React, {Component} from 'react';
 
 class Header extends Component {
     render() {
-        return (
-            <nav className="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+        return (<nav className="navbar navbar-expand-lg bg-dark border-bottom border-body" style={{
+                position: 'fixed', zIndex: 3, width: '100%', top: '0%'
+            }} data-bs-theme="dark">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#">Navbar</a>
+                    <a className="navbar-brand" href="#">Project Bit</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -17,24 +18,7 @@ class Header extends Component {
                                 <a className="nav-link active" aria-current="page" href="#">Home</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Link</a>
-                            </li>
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                   aria-expanded="false">
-                                    Dropdown
-                                </a>
-                                <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="#">Action</a></li>
-                                    <li><a className="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr className="dropdown-divider"></hr>
-                                    </li>
-                                    <li><a className="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link disabled" aria-disabled="true">Disabled</a>
+                                <a className="nav-link active" aria-current="page" href="#">About us</a>
                             </li>
                         </ul>
                         <form className="d-flex" role="search">
@@ -42,8 +26,7 @@ class Header extends Component {
                         </form>
                     </div>
                 </div>
-            </nav>
-        );
+            </nav>);
     }
 }
 

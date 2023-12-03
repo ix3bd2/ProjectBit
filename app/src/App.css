@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  width: 100%;
+  overflow: hidden;
 }
 
 .App-logo {
@@ -26,6 +28,13 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.sec2-p {
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-size: 20px;
+  padding: 40px;
+  text-align: center;
 }
 
 @keyframes App-logo-spin {
