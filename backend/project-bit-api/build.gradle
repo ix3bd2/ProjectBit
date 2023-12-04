@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.2.0'
+    id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'com.project.bit'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    sourceCompatibility = '21'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation "org.springframework.boot:spring-boot-starter-security"
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-hateoas', version: '3.2.0'
+    implementation group: 'org.springframework.security', name: 'spring-security-config', version: '6.2.0'
+    implementation group: 'org.springframework.security', name: 'spring-security-oauth2-resource-server', version: '6.2.0'
+    implementation group: 'org.springframework.security', name: 'spring-security-core', version: '6.2.0'
+    implementation group: 'org.springframework.security', name: 'spring-security-oauth2-jose', version: '6.2.0'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-configuration-processor', version: '3.2.0'
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.33'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    runtimeOnly 'com.h2database:h2'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
